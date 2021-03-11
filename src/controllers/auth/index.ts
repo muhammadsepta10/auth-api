@@ -134,7 +134,74 @@ router.route("/register").post(auth.register)
  */
 router.route("/login").post(auth.login)
 
+/**
+ * @swagger
+ * /api/v1/auth/facebook:
+ *      get:
+ *          tags:
+ *              - Auth
+ *          summary: to login with facebook
+ *
+ *          responses:
+ *             200:
+ *                  description: success login
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                              type: object
+ *                              properties:
+ *                                  message:
+ *                                      example: ""
+ *                                  status:
+ *                                      example: ""
+ *                                      type: string
+ *             400:
+ *                  description: Invalid
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                              type: object
+ *                              properties:
+ *                                  message:
+ *                                      example: ""
+ *                                  status:
+ *                                      example: error
+ */
 router.route("/facebook").get(passport.authenticate("facebook"))
+
+/**
+ * @swagger
+ * /api/v1/auth/facebook/callback:
+ *      get:
+ *          tags:
+ *              - Auth
+ *          summary: callback after login
+ *
+ *          responses:
+ *             200:
+ *                  description: success login
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                              type: object
+ *                              properties:
+ *                                  message:
+ *                                      example: ""
+ *                                  status:
+ *                                      example: ""
+ *                                      type: string
+ *             400:
+ *                  description: Invalid
+ *                  content:
+ *                      application/json:
+ *                          schema:
+ *                              type: object
+ *                              properties:
+ *                                  message:
+ *                                      example: ""
+ *                                  status:
+ *                                      example: error
+ */
 router.route("/facebook/callback").get(passport.authenticate("facebook", {
     successRedirect: "/",
     failureRedirect:"/api/v1/auth/facebook/fail"
