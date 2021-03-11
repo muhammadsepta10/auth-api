@@ -1,0 +1,57 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p ."
+  },
+  "keywords": [
+    "adcadmin"
+  ],
+  "author": "redbox",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "connect-redis": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-winston": "^4.0.5",
+    "moment": "^2.29.1",
+    "p-queue": "^6.6.2",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "pg": "^8.5.1",
+    "redis": "^3.0.2",
+    "swagger-jsdoc": "^6.0.1",
+    "swagger-ui-express": "^4.1.6",
+    "ts-node": "^9.1.1",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/bcrypt": "^3.0.0",
+    "@types/connect-redis": "0.0.16",
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.11",
+    "@types/express-session": "^1.17.3",
+    "@types/node": "^14.14.21",
+    "@types/passport": "^1.0.6",
+    "@types/passport-facebook": "^2.1.10",
+    "@types/pg": "^7.14.11",
+    "@types/redis": "^2.8.28",
+    "@types/swagger-ui-express": "^4.1.2",
+    "i": "^0.3.6",
+    "npm": "^7.6.2",
+    "typescript": "^4.2.3"
+  }
+}
